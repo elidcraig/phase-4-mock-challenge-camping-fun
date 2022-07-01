@@ -4,7 +4,7 @@ class CampersController < ApplicationController
   end
 
   def show
-    render json: Camper.find(params[:id])
+    render json: Camper.find(params[:id]), serializer: CamperShowSerializer
   end
 
   def create
